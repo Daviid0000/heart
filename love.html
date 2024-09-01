@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="icon" href="/HEART.png">
+    <title>Love</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .material-symbols-outlined{
+            color: crimson;
+            position: relative;
+            font-size: 200px;
+            margin: 200px;
+        }
+        
+        .message{
+            text-align: center; 
+            position: relative; 
+            cursor: pointer;
+            font-size: 15px; 
+            top: -120px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span class="material-symbols-outlined" id="container">
+            favorite
+            <div class="message" id="message">
+                I love you
+            </div>
+        </span>
+
+    </div>            
+    </div>
+
+    <script>
+        const elMessage = document.getElementById("message");
+
+        message.addEventListener("click", () => {
+            const elContainer = document.getElementById("container");
+            const positions = ["left", "top", "right", "button"]
+            const message = [
+                "I love you", "V", "Mi reina", "Bebita linda", "Mi princesa", 
+                "Ojitos bellos", "Traviesita", "Mi barbie", "Mi niña", "Mi protectora", 
+                "Mi vida", "Te amo", "Te extraño", "Te necesito", "Te pertenezco"
+            ]
+
+            const randomPosition = positions[Math.floor(Math.random() * positions.length)];
+            const selectMessage = message[Math.floor(Math.random() * message.length)];
+            const positionValue = Math.floor(Math.random() * 100);
+
+            elContainer.style.left = 'auto'
+            elContainer.style.right = 'auto'
+            elContainer.style.top = 'auto'
+            elContainer.style.bottom = 'auto'
+      
+            elContainer.style[randomPosition] = `${positionValue}px`
+            
+            elMessage.innerText = selectMessage;
+
+            console.log(positionValue)
+        })
+
+    </script>
+</body>
+</html>
